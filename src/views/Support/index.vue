@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <home-sec/>
+    <home-sec2/>
+    <home-sec3/>
+  </div>
+</template>
+
+<script>
+import homeSec from './section/section1'
+import homeSec2 from './section/section2'
+import homeSec3 from './section/section3'
+
+export default {
+  name: 'home',
+  components: {
+    homeSec,
+    homeSec2,
+    homeSec3
+  },
+  data () {
+    return {
+      stepHome: '',
+      lang: ''
+    }
+  },
+  methods: {
+
+  }
+}
+</script>

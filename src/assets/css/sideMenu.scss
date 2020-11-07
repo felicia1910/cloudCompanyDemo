@@ -1,0 +1,198 @@
+@import "./style.scss";
+.navBg{
+    @include size(100%,60px);
+    @include flex(space-around,center);
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+}
+
+.nav_img{
+    @include size(60px,60px);
+    background-image: url(../img/logo.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position:10px;
+    cursor: pointer;
+}
+.nav_box{
+    @include flex(space-around,center);
+    @include size(50%,60px);
+    cursor: pointer;
+}
+
+.nav_text_box{
+    height: 60px;
+    padding: 15px;
+    position: relative;
+}
+
+.nav_text_box_active{
+    border-top:solid 3px $color_brown !important;
+    padding-top: 12px !important;
+}
+
+.nav_text_box:hover{
+    border-top:solid 3px #eee;
+}
+
+.nav_text{
+    @include nameInForm(100px);
+    text-align: center;
+    color: #666;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+//service
+.service_nav_box{
+    position: absolute;
+    top: 57px;
+    left: 0;
+    width: 230px;
+    background-color: $color_gray;
+    display: none;
+}
+
+.service_nav_text p{
+    padding: 15px 20px;
+    text-align: left;
+    width: 230px;
+    color: $color_dark_gray;
+    cursor: pointer;
+}
+
+.nav_text_box:hover .service_nav_box{
+    display: initial;
+}
+
+.service_nav_text:hover{
+    background-color: $color_dark_gray;
+    color: $color_white;
+}
+
+.nav_text_box_is_service:hover{
+    background-color: $color_gray;
+}
+
+//btn
+.nav_btn_box{
+    //border:solid 1px;
+    @include size(30px,30px);
+    @include flex(center,center);
+    flex-wrap: wrap;
+    cursor: pointer;
+    z-index: 12;
+    display: none;
+}
+
+.nav_btn_box_fixed{
+    position: fixed;
+    right: 30px;
+}
+
+.nav_line{
+    border-bottom:solid 2px rgb(182, 182, 182);
+    @include size(100%,0px); 
+}
+
+.nav_top_block{
+    @include size(100%,100px);
+}
+
+.nav_text_box_is_service_dark{
+    background-color: $color_gray;
+}
+
+.nav_small_click{
+    position: absolute;
+    left: calc(50% + 40px);
+    @include size(40px,70px);
+    display: none;
+}
+.nav_small_click:hover i{
+    transition: .3s;
+    color: $color_white;
+}
+
+.nav_box_rwd{
+    @include size(100%,0);
+    overflow: hidden;
+    transition: .8s;
+}
+
+//rwd
+@media screen and (max-width: 1150px){
+    .nav_box_rwd{
+        @include size(100%,100vh);
+        position: fixed;
+        top: 0;
+        left: 0;
+        flex-wrap: wrap;
+        background-color: #fff;
+        align-content: flex-start;
+    }
+    .navBg{
+        @include flex(space-between,center);
+        padding: 0 30px;
+    }
+
+    .nav_btn_box{
+        display: flex;
+    }
+
+    .nav_box{
+        display: none;
+    }
+
+    .nav_text_box{
+        cursor: pointer;
+        @include size(100%,8vh);
+        margin: 0;
+        @include flex(center,center);
+    }
+    .nav_text{
+        margin: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .nav_text_box_active{
+        border-top:none !important;
+        padding: 15px !important;
+    }
+
+    .nav_text_box:hover{
+        border-top:none;
+        background-color: #eee;
+    }
+    .nav_text_box:hover .service_nav_box{
+        display: none;
+    }
+    .nav_text_box_is_service_top_dark{
+        background-color: $color_dark_gray;
+    }
+    .nav_text_box_is_service_top_dark p{
+        color:#eee;
+    }
+    .nav_text_box_is_service_top_dark:hover{
+        background-color: #333;
+    }
+
+    .nav_small_click{
+        display: initial;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .navBg {
+        padding: 0 10px;
+    }
+    .nav_btn_box_fixed {
+        position: fixed;
+        right: 10px;
+    }
+}

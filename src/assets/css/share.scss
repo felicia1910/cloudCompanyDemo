@@ -1,0 +1,99 @@
+@import "./style.scss";
+
+.share_box_rea{
+    position: relative;
+    @include size(100%,60px);
+}
+.share_box{
+    @include flex(flex-end,center);
+    @include size(auto,60px);
+    padding: 10px;
+    position: absolute;
+    right: 0;
+}
+
+.share{
+    padding: 0 10px;
+    text-align: center;
+    color:#999;
+    border-bottom:solid 2px rgb(205, 205, 205);
+    cursor: pointer;
+    //transition: .3s;
+}
+
+@keyframes border_ani {
+    to{
+        border-bottom:solid 2px $color_gray;
+    }
+    from{
+        border:none;
+    }
+}
+
+
+@keyframes be_long {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    20%{
+        width: 20px;
+    }
+    40%{
+        width: 40px;
+    }
+    60%{
+        width: 60px;
+    }
+    80%{
+        width: 80px;
+    }
+    100%{
+        width: auto;
+        opacity: 1;
+    }
+}
+
+.share_box:hover .share_li{
+    animation: be_long .2s;
+    transition-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.share_hover_box:hover .share{
+    color: $color_gray;
+    animation: border_ani .2s;
+    animation-fill-mode: forwards;
+}
+
+.share_ul{
+    @include flex(flex-end,center);
+    margin-right: 30px;
+    overflow: hidden;
+    transition: 1s;
+}
+.share_li{
+    margin: 0 10px;
+    width: 0;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 3s;
+}
+
+.share_li span{
+    @include flex(flex-start,center);
+}
+
+.share_li i{
+    padding-right: 5px;
+}
+
+.fa-facebook{
+    color:#3b5998;
+}
+.fa-pinterest{
+    color:#c8232c;
+}
+
+.fa-twitter{
+    color: #00acee; 
+}

@@ -1,0 +1,238 @@
+@import "./style.scss";
+
+@mixin bcCenter(){
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size:contain;
+}
+
+.about_big_box section{
+    @include size(100%,600px);
+    @include flex(center,center);
+    padding: 0 10%;
+}
+
+.about_sec1{
+    background-color: $color_light_blue;
+}
+
+.about_sec1_left,.about_sec1_right{
+    width: 50%;
+    @include size(50%,540px);
+    margin: 20px;
+}
+.about_sec1_left{
+    background: url(../img/map-01.png);
+    @include bcCenter;
+}
+.about_sec1_right{
+    color: $color_white;
+    padding: 20px;
+    padding-top: 90px;
+}
+
+.about_sec1_title{
+    font-size: 45px;
+    border-bottom: solid 3px $color_light_gray;
+    line-height: 60px; 
+}
+.about_sec1_text{
+    margin-top: 30px;
+}
+//sec2
+.about_sec2{
+    background-color: $color_yellow;
+    height: 650px !important;
+}
+
+.about_sec2_left,.about_sec2_right{
+    @include size(50%,560px);
+    margin: 20px;
+}
+
+.about_sec2_right{
+    background: url(../img/services-440x550.png);
+    @include bcCenter;
+}
+
+.about_sec2_left{
+    color: $color_white;
+}
+
+.about_sec2_title{
+    font-size: 45px;
+    margin: 30px 20px;
+    margin-top: 80px;
+    font-weight: bold;
+}
+.about_sec2_text_small_box{
+    @include flex(start,center);
+    font-size: 24px;
+    padding: 0 20px;
+}
+.about_sec2_text_small_box p{
+    font-weight: bold;
+    height: 50px;
+}
+.about_sec2_text_small_box i{
+    font-size: 30px;
+    @include size(70px,45px);
+}
+
+.about_sec2_text_small_box:hover i{
+    font-size: 40px;
+    transition: .5s;
+}
+//sec3
+.about_sec3{
+    background-color: $color_light_green;
+    height: 720px !important;
+}
+
+.about_sec3_left,.about_sec3_right{
+    width: 50%;
+    @include size(50%,560px);
+    margin: 20px;
+}
+
+.about_sec3_right{
+    background: url(../img/platform-420x530.png);
+    @include bcCenter;
+}
+.about_sec3_text{
+    display: flex;
+}
+.about_sec3_icon_all_box{
+    width: 25%;
+    position: relative;
+}
+.dot_line{
+    position: absolute;
+    border:dotted 2px;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,21px);
+    height: 240px;
+    color: $color_black;
+}
+.six_div{
+    @include size(70px,80px);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background-color: rgb(173, 254, 219);
+    margin: 20px auto;
+    @include flex(center,center)
+}
+.six_div i{
+    font-size: 24px;
+    color: $color_light_green;
+}
+
+.about_sec3_text_box div{
+    padding: 25px 10px;
+}
+
+//倒三角形
+.tran{
+    @include size(0,0);
+    border-style: solid;
+    border-width: 30px 50vw 0 50vw;
+}
+.sec1_tran{
+    border-color: $color_light_blue $color_yellow $color_yellow $color_yellow;
+}
+
+.sec2_tran{
+    border-color: $color_yellow  $color_light_green $color_light_green $color_light_green;
+}
+
+//rwd
+@media screen and (max-width: 1150px){
+    .about_big_box section{
+        padding: 0 4%;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .about_big_box section{
+        padding: 0 2%;
+    }
+
+    .about_sec1{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        height: 1100px !important;
+    }
+    
+    .about_sec1_left, .about_sec1_right{
+        width: 100%;
+    }
+    .about_sec1_right{
+        height: auto;
+        padding-top: 0;
+    }
+
+    .about_sec2_left, .about_sec3_left{
+        width: 65%;
+    }
+    .about_sec2_right,.about_sec3_right{
+        width: 35%;
+    }
+    
+}
+
+@media screen and (max-width: 720px){
+    .about_sec2,.about_sec3{
+        flex-wrap: wrap;
+        height: 1200px !important;
+    }
+    
+    .about_sec2_left, .about_sec3_left,
+    .about_sec2_right,.about_sec3_right{
+        width: 100%;
+        margin: 0;
+    }
+    .about_sec2_left, .about_sec3_left{
+        height: auto;
+    }
+    .about_sec2_title{
+        text-align: center;
+    }
+
+    .about_sec2_text_small_box,.about_sec3_text {
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 576px){
+    .about_sec1{
+        height: 1100px!important;
+    }
+    .about_sec2,.about_sec3{
+        height: 900px !important;
+    }
+    .about_sec1_right{
+        padding-right: 40px;
+    }
+    
+    .about_sec1_left,.about_sec2_right,.about_sec3_right{
+        height: 300px;
+    }
+
+    .about_sec2_title {
+        font-size: 36px;
+        margin: 30px 10px;
+        margin-top: 50px;
+    }
+    .about_sec2_text_small_box {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+    .about_sec3_text_box h4{
+        font-size: 18px;
+    }
+    .about_sec3_text_box p{
+        font-size: 15px;
+    }
+}

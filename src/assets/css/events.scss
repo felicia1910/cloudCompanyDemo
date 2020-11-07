@@ -1,0 +1,611 @@
+@import "./style.scss";
+
+.filter_big_box{
+    @include size(100%,90px);
+    @include flex(space-between,center);
+    padding: 20px 100px;
+    margin-top: 30px;
+}
+
+.event_filter_left{
+    width: 70%;
+    @include flex(flex-start,center);
+    padding-left: 40px;
+}
+
+//drop
+.drop_tmp{
+    border:solid 1px;
+    margin: 10px 15px;
+    border: none;
+}
+
+.drop_drop{
+    width: 200px;
+    position: absolute;
+    border:none;
+    z-index: 1;
+    background-color: $color_white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .5s;
+    height: 0;
+    opacity: 0;
+}
+
+.drop_drop_open{
+    height: auto;
+    border:solid 1px #DBDBDB;
+    opacity: 1;
+}
+
+.drop_item{
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.drop_item:hover{
+    background-color: #DBDBDB;
+}
+
+.drop_btn{
+    padding: 10px 20px;
+    width: 200px;
+    text-align: left;
+    border-radius: 20px;
+    position: relative;
+    outline: none !important;
+    background-color: #fff;
+    border: solid 1px #DBDBDB;
+}
+
+.three_line{
+    position: absolute;
+    @include size(15px, 18px);
+    right: 20px;
+    top: 12px;
+    @include flex(center,center);
+    flex-wrap: wrap;
+}
+
+.event_small_line{
+    @include size(15px, 1px);
+    border: solid 1px #DBDBDB;
+}
+
+.event_filter_right{
+    width: 30%;
+    position: relative;
+    @include flex(flex-end,center);
+}
+
+.event_filter_right input{
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    outline: none;
+    border-radius: 20px;
+    border:1px solid #DBDBDB;
+}
+
+.event_filter_right i{
+    position: absolute;
+    right: 25px;
+}
+
+//內容
+.event_big_box{
+    @include size(100%,auto);
+    padding: 20px 100px;
+    //margin: 40px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 10px;
+}
+
+.event_box{
+    margin: 20px;
+    position: relative;
+}
+
+.event_img_box img{
+    @include size(100%,350px);
+    object-fit: cover;
+    object-position: center center;
+}
+
+.event_img_brightness{
+    position: absolute;
+    top: 0;
+    @include size(100%,350px);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.event_img_box:hover .event_img_brightness{
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.event_text_box{
+    position: absolute;
+    @include size(100%,40px);
+    text-align: center;
+    top: 145px;
+    color: $color_white;
+}
+
+.event_box_bottom{
+    @include flex(space-between,flex-end);
+    margin: 20px 0;
+}
+
+.event_text{
+    @include flex(flex-start,center);
+    margin-bottom: 5px; 
+}
+
+.event_title{
+    font-size: 36px;
+    opacity: 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.event_img_box:hover .event_title{
+    opacity: 1;
+}
+
+.event_date span{
+    padding: 3px;
+    color: $color_dark_gray;
+    cursor: pointer;
+}
+
+.event_date{
+    color: $color_dark_gray;
+}
+
+.event_text_name{
+    color: $color_dark !important;
+    border-bottom: solid 1px $color_dark_gray;
+}
+
+.event_btn{
+    border-radius: 15px;
+    padding: 10px 30px;
+    background-color: $color_light_yellow;
+    color: $color_white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.event_btn:hover{
+    background-color: #ffc400;
+}
+
+//eventPage
+.event_page_sec{
+    @include flex(center,center);
+    margin-top: 60px;
+}
+
+.event_page_sec_left,.event_page_sec_right{
+    @include size(200px,auto);
+    margin: 40px;
+}
+
+.event_page_sec_bottom{
+    width: 70%;
+}
+
+.event_page_cat{
+    padding: 10px;
+    width: 150px;
+    background-color: $color_brown;
+    color: $color_white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.event_page_title_box{
+    @include flex(space-between,center);
+    height: 40px;
+    padding: 25px 10px 45px;
+    border-bottom:solid 1px rgb(215, 215, 215);
+    margin: 30px 0;
+}
+
+.event_page_title{
+    font-size: 28px;
+}
+
+.event_text_page{
+    margin-top: 10px;
+    width: 25%;
+    text-align: right;
+}
+
+.event_page_img{
+    @include size(100%,300px);
+    object-fit: cover;
+}
+
+.event_page_text{
+    margin: 40px 0;
+    padding: 10px;
+}
+
+.event_page_filter_box{
+    @include flex(flex-end,center);
+    //border-bottom: dotted 1px rgb(208, 207, 207);
+    padding-bottom: 15px;
+}
+
+.event_page_filter{
+    padding: 10px;
+    background-color: $color_gray;
+    margin: 5px;
+    width: 120px;
+    text-align: center;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.event_page_filter:hover{
+    background-color: rgb(193, 193, 193);
+}
+
+.event_page_filter_click{
+    background-color: $color_brown !important;
+    color: $color_white;
+}
+.event_page_details_box{
+    margin: 40px 10px;
+}
+.event_page_details_box_title{
+    @include flex(flex-start,center);
+    margin: 10px 0;
+}
+
+.event_page_details_box_title i{
+    font-size: 24px;
+    padding-right: 15px;
+}
+
+//
+.event_page_mail{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.event_page_mail h2{
+    margin-top: 20px;
+}
+
+//commit
+.event_page_commit_big_box{
+    padding: 40px 0 40px 40px;
+}
+.event_page_commit_box{
+    border:solid 1px rgb(205, 205, 205);
+    margin-top: 30px;
+}
+.event_page_commit_top_box{
+   // border:solid 1px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.event_page_commit_img{
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    border:solid 5px $color_gray;
+}
+
+.event_page_commit_title{
+    width: 100%;
+    border-bottom:dotted 1px $color_dark_gray;
+    padding: 20px 70px 10px;
+}
+
+.event_page_commit_title span,.event_page_commit_title_in span{
+    font-size:14px;
+    color: #333;
+}
+.event_page_commit_text{
+    padding: 20px 70px 5px;
+}
+.event_page_commit_icon{
+    text-align: right;
+    padding: 0px 40px 10px;
+    
+}
+.event_page_commit_icon i{
+    cursor: pointer;
+}   
+//回應人
+.event_page_commit_bottom_box{
+    border-top:solid 1px $color_gray;
+    @include flex(space-between,center); 
+    padding-bottom: 10px;
+}
+
+.event_page_commit_img_in{
+    margin: 40px;
+}
+
+.event_page_commit_title_in_box{
+    width: 100%;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.event_page_commit_title_in{
+    width: 100%;
+    border-bottom:dotted 1px $color_dark_gray;
+    padding: 20px 10px 10px;
+}
+
+.event_page_commit_text_in{
+    padding: 20px 10px 5px;
+}
+
+.event_page_commit_icon_in{
+    text-align: right;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.event_page_howMuch{
+    width: 100%;
+    text-align: right;
+    padding: 10px 40px;
+    color: $color_dark_gray;
+    border-top:solid 1px rgb(205, 205, 205);
+    cursor: pointer;
+}
+
+.event_page_commit_text_in span{
+    color:#777;
+}
+//startCommit
+.start_commit_title{
+    margin:30px 10px 0;
+}
+.start_commit_title span{
+    color:#666;
+    font-size:18px;
+    padding-left:10px;
+}
+.start_commit_det{
+    color: #999 !important;
+    font-weight: bold;
+    font-size:15px !important;
+    cursor:pointer;
+}
+.start_commit_box{
+    margin-top: 30px;
+    //border:solid 1px;
+}
+
+.start_commit_box_top{
+    @include flex(space-between,center);
+}
+
+.start_commit_box_top div{
+    margin: 10px;
+    width: 33%;
+}
+.start_commit_box_top div input{
+    width: 100%;
+    outline: none; /* 外框效果 */
+    padding: 10px;
+    margin: 5px 0;
+    background-color: $color_gray;
+    border: 0;
+    border-radius: 3px;
+}
+.start_commit_btn{
+    background-color: $color_brown;
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    float: right;
+    margin: 10px;
+    border-radius: 3px;
+    color:$color_white;
+    cursor: pointer;
+}
+
+.start_commit_box_bottom{
+    padding: 10px;
+}
+.start_commit_box_bottom textarea{
+    @include size(100%,300px);
+    resize : none;
+    background-color: $color_gray;
+    border: 0;
+    margin: 5px 0;
+}
+
+//rwd
+@media screen and (max-width: 1350px){
+    .event_big_box {
+        padding: 20px 50px;
+    }
+    .filter_big_box {
+        padding: 20px 0px;
+    }
+
+    .event_page_sec_bottom {
+        width: 90%;
+    }
+
+    .event_page_sec_left, .event_page_sec_right {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .event_big_box {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .filter_big_box {
+        flex-wrap: wrap;
+    }
+
+    .event_filter_left {
+        width: 100%;
+        padding-left: 70px;
+        flex-wrap: wrap;
+    }
+    .event_filter_right {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px 50px;
+    }
+    .event_filter_right input {
+        width: 100%;
+    }
+    .event_filter_right i {
+        right: 85px;
+    }
+    .event_big_box {
+        padding: 0px 50px 100px;
+    }
+
+    .filter_big_box{
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 810px){
+    .event_big_box {
+        grid-template-columns: 1fr;
+    }
+    .event_page_commit_text {
+        padding: 20px 20px 5px 70px;
+    }
+    .event_page_commit_big_box h2{
+        font-size: 24px;
+    }
+    .event_page_commit_img_in{
+        margin: 40px 20px;
+    }
+    .event_page_commit_title_in_box {
+        width: calc(100% - 120px);
+    }
+    .event_page_commit_text_in{
+        word-break: break-all;
+    }
+
+    .event_page_sec_bottom {
+        width: 95%;
+    }
+    .start_commit_box{
+        margin-left: -40px; 
+    }
+    .start_commit_title{
+        margin-left: -30px; 
+    }
+}
+
+@media screen and (max-width: 576px){
+    .event_filter_left{
+        padding: 0;
+    }
+    .filter_by{
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .drop_tmp,.drop_btn {
+        width: 100%;
+    }
+    .drop_tmp{
+        padding: 0px;
+    }
+    .drop_drop{
+        width: 94%;
+        min-width: 350px;
+    }
+    .event_filter_right {
+        padding: 10px 0px;
+    }
+    .event_filter_right i {
+        right: 35px;
+    }
+
+    .event_big_box {
+        padding: 0px 5px 100px;
+    }
+
+    //
+    .event_page_commit_img {
+        @include size(40px,40px);
+        overflow: hidden;
+        border-radius: 50%;
+        top: 6px;
+        left: 15px;
+        border: solid 3px #f4f4f4;
+    }
+    .event_page_commit_title,.event_page_commit_title_in{
+        font-size: 15px;
+    }
+    .event_page_commit_title span,
+    .event_page_commit_title_in span{
+        font-size: 12px;
+    }
+
+    .event_page_commit_text {
+        padding: 20px 15px 0px;
+        font-size: 15px;
+    }
+    .event_page_commit_icon {
+        padding: 0px 40px;
+    }
+    .event_page_commit_img_in{
+        display: none;
+    }
+    .event_page_commit_title_in_box {
+        width: 100%;
+        margin: auto;
+    }
+    .event_page_commit_text_in{
+        font-size: 15px;
+    }
+    .event_page_commit_box,
+    .event_page_commit_big_box h2{
+        margin-left: -40px;
+    }
+
+    .event_page_title_box{
+        flex-wrap: wrap;
+        height: auto;
+        margin-top: 0px;
+        padding-bottom: 10px; 
+    }
+    .event_page_title {
+        width: 100%;
+    }
+    .event_text_page{
+        width: 100%;
+    }
+
+    .event_page_text ul{
+        margin-left:-20px;
+    }
+    //
+    .share_ul{
+        margin-right: 10px !important;
+    }
+    .share_li{
+        margin: 0 5px !important;
+    } 
+}

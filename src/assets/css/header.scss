@@ -1,0 +1,308 @@
+@import "./style.scss";
+.header_background{
+    @include size(100%,100vh);
+    background-color: $color_light_blue;
+    margin: 0;
+    min-height: 667px;
+    position: relative;
+}
+
+.header_body{
+    @include size(100%,80vh); 
+}
+
+.header_body_home{
+    @include size(100%,80vh);
+    @include flex(center, center);
+    margin-top: 60px;
+    min-height: 440px; 
+}
+.particles_box,.particles_box2{
+    position: absolute;
+    @include size(100%,90vh);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.particles_box2{
+    @include size(100%,120vh);
+}
+.particles_box2 .particles-js-canvas-el{
+    height: 140vh !important;
+    width: 120% !important;
+    margin-left: -10%;
+}
+
+//typer
+.vue-typer{
+    font-weight: 900!important;
+    font-size: 60px;
+    line-height: 75px;
+    letter-spacing: -1px;
+    font-family: 'Montserrat' !important;
+}
+
+.vue-typer .custom.char.typed {
+    color: $color_white ;
+}
+
+.vue-typer .vue-typer-caret-solid{
+    color: $color_white ;
+    width: 5px;
+    background-color: $color_white !important;
+    
+}
+
+.header_text_box{
+    width: 100%;
+    padding-left: 7%; 
+}
+.header_text_box h1{
+    color: $color_white;
+    font-weight: 900!important;
+    font-size: 60px;
+    line-height: 75px;
+    letter-spacing: -1px;
+    font-family: 'Montserrat' !important;
+}
+.header_text_box p{
+    color: $color_white;
+    margin-top: 35px; 
+    font-weight: 300;
+    line-height: 24.99px;
+    letter-spacing: 1px;
+    width: 550px;
+    padding: 5px;
+}
+.header_btn_box{
+    @include flex(start,center);
+    padding: 40px 10px;
+}
+.header_btn{
+    padding: 10px 20px;
+    border:solid 1px $color_white;
+    color:$color_white;
+    margin-right: 30px;
+    cursor: pointer;
+    z-index: 1;
+    transition: .3s;
+}
+
+.header_btn_white{
+    background-color: $color_white;
+    color: $color_light_blue;
+}
+
+.header_btn_white:hover{
+    color: $color_yellow;
+}
+
+.header_btn_yellow:hover{
+    background-color: $color_yellow;
+}
+
+.cloud_svg{
+    @include size(100%,30vh);
+    background-image: url(../img/cloud.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    margin-top: -10vh; 
+    
+}
+
+@mixin headerImg{
+    @include size(100%,300px);
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+// aboutUs
+
+.header_background_about{
+    @include size(100%,100vh);
+    background:url(../img/apple-desk-laptop-working.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -20px;
+    margin: 0;
+}
+
+.header_text_box_about{
+    width: 100%;
+    text-align: center;
+    color: $color_white;
+    padding-top: 44vh;
+    transition: 1s;
+    opacity: 1;
+    transform: translate(0,0)
+}
+
+.header_text_box_about h1{
+    font-size: 55px;
+    letter-spacing: 2px;
+    width: 98%;
+}
+
+.header_text_box_about_ani{
+    transform: translate(0px,100px);
+    opacity: 0;
+}
+//services
+.header_background_ser{
+    @include flex(center,center);
+}
+
+.header_background_service_all{
+    @include size(100%,440px);
+    background:url(../img/Cloudnifier-logorgb-country.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center -20px;
+    @include flex(center,center);
+}
+
+.header_background_service_all h1{
+    width: 70%;
+    color: $color_white;
+    text-align: center;
+    margin-top: 50px;
+    padding: 10px;
+}
+//edu
+.header_background_edu{
+    background-color: $color_green;
+}
+
+.header_text_box_service_big{
+    padding-top: 0;
+}
+
+//event
+.header_background_event_all{
+    @include size(100%,440px);
+    background:url(../img/picture2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 0px;
+    @include flex(center,center);
+    color: $color_white;
+}
+
+.header_background_event_dark{
+    position: absolute;
+    @include size(100%,440px);
+    background-color: rgba(0, 0, 0, .2);
+    left: 0;
+    top: 0;
+}
+
+.header_background_event_all h1{
+    z-index: 1;
+    text-align: center;
+}
+
+//contact
+.header_background_contact{
+    @include size(100%,100vh);
+    background-color: rgb(81, 168, 226);
+    @include flex(center,center);
+}
+
+.header_text_box_contact{
+    width: 50%;
+    margin-left: 55%;
+    color: $color_white;
+    margin-top: 70px;
+}
+
+.header_text_box_contact h3{
+    font-size: 48px;
+    margin-bottom: 35px;
+}
+
+.contact_small_box{
+    opacity: .9; 
+    margin: 30px 0;
+    @include flex(flex-start,center);
+    padding-right: 10px;
+}
+.header_text_box_contact p{
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 1;
+}
+
+.header_text_box_contact i{
+    padding-right: 10px;
+    font-size: 28px;
+    width: 40px;
+}
+
+//rwd
+@media screen and (max-width: 1350px){
+    .header_background_about{
+        background-position: center 0px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .header_text_box{
+        padding-right:7%; 
+    }
+}
+
+@media screen and (max-width: 810px){
+    .vue-typer{
+        font-size: 48px;
+    }
+    .header_text_box p{
+        width: auto;
+    }
+    //
+    .header_background_service_all h1{
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .vue-typer{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .header_text_box p{
+        font-size: 12px;
+        margin-top: 10px;
+    }
+    .header_btn_box {
+        padding: 30px 5px;
+    }
+    .header_btn {
+        font-size: 13px;
+        padding: 10px 10px;
+        margin-right: 0px;
+    }
+    .header_btn_white{
+        margin-right: 15px;
+    }
+
+    .cloud_svg {
+        position: absolute;
+        bottom: 0;
+        height: 20vh;
+    }
+    //
+    .header_text_box_contact {
+        width: 100%;
+        margin-left: 0%;
+        padding: 30px;
+        padding-right:30px;
+    
+    }
+
+    .header_background_service_all h1{
+        font-size: 32px;
+    }
+}

@@ -1,0 +1,103 @@
+@import "./style.scss";
+
+.pagination_box,.btnForText_pug{
+    @include flex(center,center);
+}
+
+/*--PAGINATION*/
+.page-css{
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #007bff;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.page-item-css{
+    padding: .25rem .7rem;
+}
+.page-item-css a{
+    color: #999;
+    border-radius: 999px;
+}
+.page-item-css a:hover{
+    background-color: #eee;
+    color: #999;
+}
+
+.page-item-css div{
+    color: #999;
+}
+.page-item-css div:hover{
+    color: #999;
+    background-color: rgba(238, 238, 238, 0);
+}
+.click-page{
+    cursor: wait;
+}
+.page-item-css-click a{
+    pointer-events: none;
+}
+
+.page-item-css-click a:hover{
+    pointer-events: none;
+}
+
+//
+.pagination{
+    border: none;
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+}
+.pagination .active{
+    background-color: #d71a21
+}
+.page-item{
+    padding: .25rem .7rem;
+    cursor: pointer;
+}
+.page-item a{
+    color: #999;
+    border-radius: 999px;
+}
+.page-item a:hover{
+    background-color: #eee;
+    color: #999;
+}
+.page-item a:active{
+    color: #fff;
+    background-color: #999;
+}
+.page-item a:focus{
+    color: #fff;
+    background-color: #999;
+}
+.page-item div{
+    color: #999;
+}
+.page-item div:hover{
+    color: #999;
+    background-color: rgba(238, 238, 238, 0);
+}
+
+@media screen and (max-width: 810px){
+    .pagination_box{
+        margin-left: -40px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .pagination {
+        font-size: 16px !important;
+    }
+    .page-item-css {
+        padding: .25rem 5px;
+    }
+    .page-link {
+        padding: 0.5rem 0.75rem;
+    }
+}
+

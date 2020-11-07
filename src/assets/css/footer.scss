@@ -1,0 +1,72 @@
+@import "./style.scss";
+.footer_background{
+    @include size(100%,200px);
+    background-color: $color_black;
+}
+.footer_box{
+    margin: auto;
+    @include flex(center,center);
+    @include size(90%,60px);
+    padding: 50px;
+}
+
+.footer_text_box{
+    height: 60px;
+    margin-top: 100px;
+    color: $color_white;
+}
+
+.footer_text{
+    text-align: center;
+    color: $color_white;
+    font-size: 12px;
+    padding: 4px;
+}
+
+.footer_text:hover{
+    transition: .5s;
+    color: rgb(162, 162, 162);
+}
+.footer_text:hover span{
+    color: $color_white;
+}
+
+.cloudnifier_com{
+    color: $color_gray;
+    margin: auto;
+    margin-top: 60px;
+    width: 150px;
+    text-align: center;
+    font-weight: 12px;
+    font-weight: 400;
+}
+
+.cookie_text{
+    color: $color_gray;
+    opacity: .7;
+    margin: auto;
+    padding: 10px;
+    //margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+//rwd
+@media screen and (max-width: 810px){
+    .footer_background{
+        height: auto;
+        padding-top: 100px;
+        padding-bottom: 10px;
+    }
+    .footer_box{
+        flex-wrap: wrap;
+        padding: 0;
+        height: auto;
+    }
+
+    .footer_text_box {
+        height: auto;
+        margin-top: 0px;
+    }
+}

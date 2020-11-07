@@ -1,0 +1,43 @@
+@import "./style.scss";
+
+.contact_big_box section{
+    @include size(100%,600px);
+    @include flex(center,center);
+    padding: 0 10%;
+}
+.contact_left,.contact_right{
+    width: 50%;
+    text-align: center;
+}
+
+.contact_box{
+    @include size(80%,450px);
+    @include flex(center,center);
+    margin: auto;
+    //border:solid 1px;
+}
+
+@media screen and (max-width: 1150px){
+    .contact_big_box section{
+        padding: 30px 4% 100px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 810px){
+    .contact_big_box section {
+        flex-wrap: wrap;
+    }
+    .contact_left,.contact_right{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .contact_big_box section {
+        flex-wrap: wrap;
+    }
+    .contact_left,.contact_right,.contact_box{
+        width: 100%;
+    }
+}
